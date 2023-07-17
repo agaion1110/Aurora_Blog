@@ -1,0 +1,74 @@
+<template><div><h1 id="计算机网络的概述" tabindex="-1"><a class="header-anchor" href="#计算机网络的概述" aria-hidden="true">#</a> 计算机网络的概述</h1>
+<h2 id="计算机网络概念" tabindex="-1"><a class="header-anchor" href="#计算机网络概念" aria-hidden="true">#</a> 计算机网络概念</h2>
+<p><mark><strong>计算机网络是互连的、自治的计算机集合。</strong></mark></p>
+<p>是一个将分散的、具有独立功能的计算机系统，通过通信设备与线路连接起来，有功能完善的软件实现支援共享和信息传递的系统。</p>
+<!-- more -->
+<h2 id="计算机网络的组成" tabindex="-1"><a class="header-anchor" href="#计算机网络的组成" aria-hidden="true">#</a> 计算机网络的组成</h2>
+<ol>
+<li>组成部分：硬件、软件、协议</li>
+<li>工作方式：边缘部分、核心部分</li>
+<li><mark>功能组成</mark>：通信子网、资源子网</li>
+</ol>
+<h2 id="计算机网络的功能" tabindex="-1"><a class="header-anchor" href="#计算机网络的功能" aria-hidden="true">#</a> 计算机网络的功能</h2>
+<ol>
+<li>数据通信</li>
+<li>资源共享</li>
+<li>分布式处理、提高可靠性、负载均衡</li>
+</ol>
+<h2 id="计算机网络的分类" tabindex="-1"><a class="header-anchor" href="#计算机网络的分类" aria-hidden="true">#</a> 计算机网络的分类</h2>
+<ol>
+<li>按分布范围分：广域网WAN、城域网MAN、局域网LAN、个人区域网PAN。</li>
+<li>按使用者分：公用网（中国电信）、专用网（政府部门、军队）。</li>
+<li>按交换技术分：电路交换、报文交换、分组交换（后两者采用存储转发即先存储后转发，不独占线路）。</li>
+<li>按照拓扑结构分：总线型、星型、环型、网状型（常用于关于网）</li>
+<li>按传输技术分：广播式网络（共享网络共同通信信道）、点对点网络（使用分组存储转发和路由选择机制）。</li>
+</ol>
+<h2 id="性能指标" tabindex="-1"><a class="header-anchor" href="#性能指标" aria-hidden="true">#</a> 性能指标</h2>
+<h3 id="速率" tabindex="-1"><a class="header-anchor" href="#速率" aria-hidden="true">#</a> 速率</h3>
+<p>速率即数据率或称数据传输率或比特率。</p>
+<p>连接在计算机网络上的主机在数字信道上传送数据位数的速率。</p>
+<p>计算机网络的速率单位有 <code v-pre>Kb/s、Mb/s、Gb/s、Tb/s</code>它们之间的换算单位是10³</p>
+<blockquote>
+<p><code v-pre>1kb/s = 10³b/s</code></p>
+<p><code v-pre>1Mb/s = 10³kb/s = 10⁶kb/s</code></p>
+<p><code v-pre>1Gb/s = 10³Mb/s = 10⁶kb/s = 10⁹b/s</code></p>
+<p><code v-pre>1Tb/s = 10³Gb/s = 10⁶Mb/s = 10⁹kb/s = 10¹²b/s</code></p>
+</blockquote>
+<h3 id="带宽" tabindex="-1"><a class="header-anchor" href="#带宽" aria-hidden="true">#</a> 带宽</h3>
+<p>在计算机网络中，带宽用来表示网络通信线路传达数据的能力，通常是指单位时间内从网络中的某一点到另外一点所能通过的”最高数据率“。通常是”比特每秒“<code v-pre>Kb/s、Mb/s、Gb/s、Tb/s</code></p>
+<p><mark><strong>是网络设备所支持的最高速度，是指在信息发送端理想情况下最多传输的数据量！</strong></mark></p>
+<h3 id="吞吐量" tabindex="-1"><a class="header-anchor" href="#吞吐量" aria-hidden="true">#</a> 吞吐量</h3>
+<p>表示在单位时间内通过某个网络（或信道、接口）的数据量。吞吐量受网络的带宽或网络的额定速率的限制。</p>
+<h3 id="时延" tabindex="-1"><a class="header-anchor" href="#时延" aria-hidden="true">#</a> 时延</h3>
+<p>指数据（报文、分组、比特流）从网络（或链路）的一端传送到另一端所需要的时间。也叫时延或迟延。单位是s。</p>
+<ol>
+<li>
+<p>发送时延（传输时延）：从发送分组的第一个比特算起，到该分组的最后一个比特发送完毕所需要的时间。（发生在主机内部）</p>
+<p><strong>发送</strong>时延 =  数据长度/信道带宽（<strong>发送</strong>速率）</p>
+</li>
+<li>
+<p>传播时延：取决与电磁波传播速度和链路长度。（发生在外部的）</p>
+<p>传播时延 = 信道长度 /电磁波在信道上的传播速率</p>
+</li>
+<li>
+<p>排队时延：等待输入/输出链路的时间</p>
+</li>
+<li>
+<p>处理时延：检错，找出口</p>
+</li>
+</ol>
+<p><mark><strong>高速链路是以提高信道带宽来达到减少发送时延目的的，即提高主机向信道推送数据量而不是提高信道内的传播速率。</strong></mark></p>
+<h3 id="时延带宽积" tabindex="-1"><a class="header-anchor" href="#时延带宽积" aria-hidden="true">#</a> 时延带宽积</h3>
+<p>时延带宽积 = 传播时延 × 带宽</p>
+<p>时延带宽积又称为以比特为单位的链路长度。即“某段链路现有多少比特”。</p>
+<h3 id="往返时延rtt" tabindex="-1"><a class="header-anchor" href="#往返时延rtt" aria-hidden="true">#</a> 往返时延RTT</h3>
+<p>从发送数据开始，到发送方收到接收方的确认（接收方收到数据后立即发送确认），总共经历的时延。</p>
+<p>RTT越大，在收到确认之前，可以发送的数据越多。</p>
+<p><code v-pre>RTT = 往返传播时延(传播时延×2) + 末端处理时间</code></p>
+<h3 id="利用率" tabindex="-1"><a class="header-anchor" href="#利用率" aria-hidden="true">#</a> 利用率</h3>
+<p>利用率：信道利用率、网络利用率</p>
+<p>信道利用率 = 有数据通过时间/（有+无）数据通过时间</p>
+<p>网络利用率 = 信道利用率加权平均值</p>
+</div></template>
+
+
