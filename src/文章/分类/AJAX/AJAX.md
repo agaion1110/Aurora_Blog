@@ -8,7 +8,7 @@ tag:
   - 笔记
   - AJAX请求
 star: true
-sticky: true
+sticky: false
 ---
 
 # AJAX总结笔记

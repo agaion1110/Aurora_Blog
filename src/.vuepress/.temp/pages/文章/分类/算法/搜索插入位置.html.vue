@@ -1,4 +1,5 @@
 <template><div><h1 id="力扣-搜索插入位置" tabindex="-1"><a class="header-anchor" href="#力扣-搜索插入位置" aria-hidden="true">#</a> 力扣 搜索插入位置</h1>
+<h2 id="题目" tabindex="-1"><a class="header-anchor" href="#题目" aria-hidden="true">#</a> 题目</h2>
 <p>给定一个排序数组和一个目标值，在数组中找到目标值，并返回其索引。如果目标值不存在于数组中，返回它将会被按顺序插入的位置。</p>
 <p>请必须使用时间复杂度为 O(log n) 的算法。</p>
 <!-- more -->
@@ -13,7 +14,7 @@
 输出: 4
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><p>来源：力扣（LeetCode）
 链接：<a href="https://leetcode.cn/problems/search-insert-position" target="_blank" rel="noopener noreferrer">https://leetcode.cn/problems/search-insert-position<ExternalLinkIcon/></a></p>
-<h3 id="解题思路" tabindex="-1"><a class="header-anchor" href="#解题思路" aria-hidden="true">#</a> 解题思路</h3>
+<h2 id="解题思路" tabindex="-1"><a class="header-anchor" href="#解题思路" aria-hidden="true">#</a> 解题思路</h2>
 <p>二分法解题</p>
 <h3 id="代码" tabindex="-1"><a class="header-anchor" href="#代码" aria-hidden="true">#</a> 代码</h3>
 <div class="language-javascript line-numbers-mode" data-ext="js"><pre v-pre class="language-javascript"><code><span class="token doc-comment comment">/**
@@ -39,8 +40,9 @@
     <span class="token punctuation">}</span>
     <span class="token keyword">return</span> end <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span><span class="token comment">//没有目标值的话插入到结尾的右边</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="解题思路二" tabindex="-1"><a class="header-anchor" href="#解题思路二" aria-hidden="true">#</a> 解题思路二</h3>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="解题思路二" tabindex="-1"><a class="header-anchor" href="#解题思路二" aria-hidden="true">#</a> 解题思路二</h2>
 <p>JS语法，先插入目标值，再利用set去重排序，最后返回找到的下标</p>
+<h3 id="代码-1" tabindex="-1"><a class="header-anchor" href="#代码-1" aria-hidden="true">#</a> 代码</h3>
 <div class="language-javascript line-numbers-mode" data-ext="js"><pre v-pre class="language-javascript"><code><span class="token doc-comment comment">/**
  * <span class="token keyword">@param</span> <span class="token class-name"><span class="token punctuation">{</span>number<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">}</span></span> <span class="token parameter">nums</span>
  * <span class="token keyword">@param</span> <span class="token class-name"><span class="token punctuation">{</span>number<span class="token punctuation">}</span></span> <span class="token parameter">target</span>

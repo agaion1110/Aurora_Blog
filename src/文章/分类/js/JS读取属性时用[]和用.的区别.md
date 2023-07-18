@@ -5,8 +5,9 @@ category:
   - js
 tag:
   - js基础
+  - 面试题
 star: true
-sticky: true
+sticky: false
 ---
 
 # js对象中取属性值用“ . ”和用[ \]的区别

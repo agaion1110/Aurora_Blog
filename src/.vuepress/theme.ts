@@ -2,7 +2,7 @@ import { hopeTheme } from "vuepress-theme-hope";
 import { zhNavbar } from "./navbar/index.js";
 import { zhSidebar } from "./sidebar/index.js";
 export default hopeTheme({
-  hostname: "https://118.24.93.28/blog",
+  hostname: "https://wei-z.top",
   author: {
     name: "Aurora",
     url: "https://gitee.com/agaion1110",

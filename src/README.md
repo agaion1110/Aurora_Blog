@@ -7,7 +7,7 @@ heroImage: /logo1.png
 heroImageStyle:
   - border-radius: 50%
   - opacity: 0.8
-bgImage: https://files.codelife.cc//itab/wallpaper/636e43d488311c79105ce7aa.jpeg?t=1689325351701&x-oss-process=image/resize,limit_0,m_fill,w_3840,h_2160/quality,q_96/format,webp
+bgImage: /blog.png
 bgImageStyle:
   - background-attachment: fixed
 heroText: Aurora's Blog

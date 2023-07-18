@@ -1,1 +1,0 @@
-import{_ as t,W as s,X as o,Y as e,Z as a}from"./framework-474f8844.js";const n={},r=e("h1",{id:"介绍页",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#介绍页","aria-hidden":"true"},"#"),a(" 介绍页")],-1),c=e("p",null,"将你的个人介绍和档案放置在此处。dsddsd",-1),d=[r,c];function _(i,l){return s(),o("div",null,d)}const f=t(n,[["render",_],["__file","intro.html.vue"]]);export{f as default};
