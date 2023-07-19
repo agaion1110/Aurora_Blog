@@ -7,8 +7,9 @@ tag:
   - 笔记
   - 前端考核题
   - 面试题
-star: true
+star: false
 sticky: false
+copy.disableCopy: true
 ---
 
 # Vue中计算属性computed

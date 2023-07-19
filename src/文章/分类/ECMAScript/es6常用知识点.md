@@ -10,6 +10,7 @@ tag:
   - es6
 star: false
 sticky: false
+copy.disableCopy: true
 ---
 
 

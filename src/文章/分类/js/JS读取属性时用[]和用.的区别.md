@@ -6,8 +6,9 @@ category:
 tag:
   - js基础
   - 面试题
-star: true
+star: 2220
 sticky: false
+copy.disableCopy: true
 ---
 
 # js对象中取属性值用“ . ”和用[ \]的区别

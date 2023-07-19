@@ -9,6 +9,7 @@ tag:
   - AJAX请求
 star: true
 sticky: false
+copy.disableCopy: true
 ---
 
 # AJAX总结笔记

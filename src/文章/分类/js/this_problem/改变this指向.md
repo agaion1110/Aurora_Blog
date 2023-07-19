@@ -1,6 +1,6 @@
 ---
 icon: edit
-date: 2023-07-1
+date: 2023-07-01
 category:
   - js
 tag:
@@ -8,6 +8,7 @@ tag:
   - 面试题
 star: true
 sticky: true
+copy.disableCopy: true
 ---
 
 #  改变this指向
