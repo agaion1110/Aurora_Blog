@@ -27,7 +27,6 @@ export default hopeTheme({
       Gitee: "https://gitee.com/agaion1110",
       GitHub: "https://example.com",
       QQ: "https://example.com",
-      CSDN: ["https://blog.csdn.net/weixin_63050915?spm=1000.2115.3001.5343","/src/.vuepress/public/logo.svg"],
       Wechat: "https://wx.qq.com/"
     },
     roundAvatar: true,

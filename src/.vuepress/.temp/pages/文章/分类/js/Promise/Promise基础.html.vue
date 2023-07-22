@@ -147,20 +147,17 @@ myPromise
 </ul>
 <p><strong>说明：返回一个新的promise,第一个完成的promise的结果状态就是最终的结果状态</strong></p>
 <h2 id="promise的几个关键问题" tabindex="-1"><a class="header-anchor" href="#promise的几个关键问题" aria-hidden="true">#</a> Promise的几个关键问题</h2>
-<ol>
-<li>如何改变promise的状态？
+<h3 id="如何改变promise的状态" tabindex="-1"><a class="header-anchor" href="#如何改变promise的状态" aria-hidden="true">#</a> 如何改变promise的状态？</h3>
 <ul>
 <li>resolve(value): 如果当前是pending就会变为resolved</li>
 <li>reject(reason小：如果当前是pending就会变为rejected</li>
 <li>抛出异常：如果当前是pending就会变为rejected</li>
 </ul>
-</li>
-<li>一个promise指定多个成功/失败回调函数，都会调用吗？
+<h3 id="一个promise指定多个成功-失败回调函数-都会调用吗" tabindex="-1"><a class="header-anchor" href="#一个promise指定多个成功-失败回调函数-都会调用吗" aria-hidden="true">#</a> 一个promise指定多个成功/失败回调函数，都会调用吗？</h3>
 <ul>
 <li>当promise改变为对应状态时都会调用</li>
 </ul>
-</li>
-<li>改变promise状态和指定回调函数谁先谁后？
+<h3 id="改变promise状态和指定回调函数谁先谁后" tabindex="-1"><a class="header-anchor" href="#改变promise状态和指定回调函数谁先谁后" aria-hidden="true">#</a> 改变promise状态和指定回调函数谁先谁后？</h3>
 <ul>
 <li>都有可能，正常情况下是先指定回调再改变状态(因为一般promise对象里是要处理异步任务的，所以会在指定回调函数执行了才会改变promise状态)，但也可以先改状态再指定回调，如2中所示。</li>
 <li>如何先改状态再指定回调？
@@ -176,45 +173,37 @@ myPromise
 </ol>
 </li>
 </ul>
-</li>
-<li>Promise.then()方法的返回结果特点
+<h3 id="promise-then-方法的返回结果特点" tabindex="-1"><a class="header-anchor" href="#promise-then-方法的返回结果特点" aria-hidden="true">#</a> Promise.then()方法的返回结果特点</h3>
 <ul>
 <li>简单表达：由then()指定的回调函数执行的结果决定</li>
 <li>详细表达：
 <ul>
 <li>如果抛出异常，新promise状态变为rejected,reason为抛出的异常</li>
-<li>如果返回的是非promise的任意值，新promise状态变为resolved,value为返回的值</li>
+<li>如果返回的是非promise的任意值，新promise的结果变为resolved,value为返回的值</li>
 <li>如果返回的是另一个新promise,此promise的结果就会成为新promise的结果</li>
 </ul>
 </li>
 </ul>
-</li>
-<li>promise如何串连多个操作任务？
+<h3 id="promise如何串连多个操作任务" tabindex="-1"><a class="header-anchor" href="#promise如何串连多个操作任务" aria-hidden="true">#</a> promise如何串连多个操作任务？</h3>
 <ul>
 <li>promise的then()返回一个新的promise,可以开成then()的链式调用</li>
 <li>通过then的链式调用串连多个同步/异步任务</li>
 </ul>
-</li>
-<li>promise异常传透？
+<h3 id="promise异常传透" tabindex="-1"><a class="header-anchor" href="#promise异常传透" aria-hidden="true">#</a> promise异常传透？</h3>
 <ul>
 <li>当使用promise的then链式调用时，可以在最后指定失败的回调，</li>
 <li>前面任何操作出了异常，都会传到最后失败的回调中处理</li>
 </ul>
-</li>
-<li>promise异常传透</li>
-</ol>
+<h3 id="promise异常传透-1" tabindex="-1"><a class="header-anchor" href="#promise异常传透-1" aria-hidden="true">#</a> promise异常传透</h3>
 <ul>
 <li>当使用promise的then链式调用时，可以在最后指定失败的回调</li>
 <li>前面任何操作出了异常，都会传到最后失败的回调中处理</li>
 </ul>
-<ol start="8">
-<li>中断promise链
+<h3 id="中断promise链" tabindex="-1"><a class="header-anchor" href="#中断promise链" aria-hidden="true">#</a> 中断promise链</h3>
 <ul>
 <li>当使用promise的then链式调用时，在中间中断，不再调用后面的回调函数</li>
 <li>办法：在回调函数中返回一个pendding状态的promise对象</li>
 </ul>
-</li>
-</ol>
 </div></template>
 
 
