@@ -16,7 +16,7 @@ npm install -D vuepress
 }
 ```
 
-```
+
 ### 安装主题
 ``` shell
 npm init vuepress-theme-hope add [dir]
