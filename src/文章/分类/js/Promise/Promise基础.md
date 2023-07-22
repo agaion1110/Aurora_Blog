@@ -154,17 +154,34 @@ setTimeout(()=>{],2000);
 ## Promise的几个关键问题
 
 1. 如何改变promise的状态？
-   1. resolve(value): 如果当前是pending就会变为resolved
-   2. reject(reason小：如果当前是pending就会变为rejected
-   3. 抛出异常：如果当前是pending就会变为rejected
+   - resolve(value): 如果当前是pending就会变为resolved
+   - reject(reason小：如果当前是pending就会变为rejected
+   - 抛出异常：如果当前是pending就会变为rejected
 2. 一个promise指定多个成功/失败回调函数，都会调用吗？
-   1. 当promise改变为对应状态时都会调用
+   - 当promise改变为对应状态时都会调用
 3. 改变promise状态和指定回调函数谁先谁后？
-   1. 都有可能，正常情况下是先指定回调再改变状态(因为一般promise对象里是要处理异步任务的，所以会在指定回调函数执行了才会改变promise状态)，但也可以先改状态再指定回调，如2中所示。
-   2. 如何先改状态再指定回调？
+   - 都有可能，正常情况下是先指定回调再改变状态(因为一般promise对象里是要处理异步任务的，所以会在指定回调函数执行了才会改变promise状态)，但也可以先改状态再指定回调，如2中所示。
+   - 如何先改状态再指定回调？
       1. 在执行器中直接调用resolve()/reject()
       2. 延迟更长时间才调用 
-   3. 什么时候才能得到数据？
+   - 什么时候才能得到数据？
       1. 如果先指定的回调，那当状态发生改变时，回调函数就会调用，得到数据
       2. 如果先改变的状态，那当指定回调时，回调函数就会调用，得到数据
-
+4. Promise.then()方法的返回结果特点
+   - 简单表达：由then()指定的回调函数执行的结果决定
+   - 详细表达：
+      - 如果抛出异常，新promise状态变为rejected,reason为抛出的异常
+      - 如果返回的是非promise的任意值，新promise状态变为resolved,value为返回的值
+      - 如果返回的是另一个新promise,此promise的结果就会成为新promise的结果
+5. promise如何串连多个操作任务？
+   - promise的then()返回一个新的promise,可以开成then()的链式调用
+   - 通过then的链式调用串连多个同步/异步任务
+6. promise异常传透？
+   - 当使用promise的then链式调用时，可以在最后指定失败的回调，
+   - 前面任何操作出了异常，都会传到最后失败的回调中处理
+7. promise异常传透
+  - 当使用promise的then链式调用时，可以在最后指定失败的回调
+  - 前面任何操作出了异常，都会传到最后失败的回调中处理
+8. 中断promise链
+    - 当使用promise的then链式调用时，在中间中断，不再调用后面的回调函数
+    - 办法：在回调函数中返回一个pendding状态的promise对象

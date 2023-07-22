@@ -1,6 +1,6 @@
 <template><div><h1 id="改变this指向" tabindex="-1"><a class="header-anchor" href="#改变this指向" aria-hidden="true">#</a> 改变this指向</h1>
-<p>箭头函数,不能改变this指向,只有普通function函数,能改变this指向，想要真正改变this指向还得另寻他法</p>
-<!-- more -->
+<p>与其他语言相比，<strong>函数的 <code v-pre>this</code> 关键字</strong>在 JavaScript 中的表现略有不同，此外，在<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Strict_mode" target="_blank" rel="noopener noreferrer">严格模式<ExternalLinkIcon/></a>和非严格模式之间也会有一些差别。</p>
+<p>在绝大多数情况下，函数的调用方式决定了 <code v-pre>this</code> 的值（运行时绑定）。<code v-pre>this</code> 不能在执行期间被赋值，并且在每次函数被调用时 <code v-pre>this</code> 的值也可能会不同。ES5 引入了 <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/bind" target="_blank" rel="noopener noreferrer">bind<ExternalLinkIcon/></a> 方法来设置函数的 <code v-pre>this</code> 值，而不用考虑函数如何被调用的。ES2015 引入了<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions" target="_blank" rel="noopener noreferrer">箭头函数<ExternalLinkIcon/></a>，箭头函数不提供自身的 this 绑定（<code v-pre>this</code> 的值将保持为闭合词法上下文的值）。<!-- more --></p>
 <h2 id="改变this指向的方法" tabindex="-1"><a class="header-anchor" href="#改变this指向的方法" aria-hidden="true">#</a> 改变this指向的方法</h2>
 <ol>
 <li>
