@@ -6,7 +6,7 @@ npm init
 npm install -D vuepress
 ```
 ### 配置基本项
-在 package.json 中添加一些 script。
+在 package.json 中添加一些 script
 ``` json
 {
   "scripts": {
@@ -15,7 +15,7 @@ npm install -D vuepress
   }
 }
 ```
-\ No newline at end of file
+
 ```
 ### 安装主题
 ``` shell
