@@ -15,14 +15,14 @@
 <p>为什么返回数值是整数，但输出的答案是数组呢?</p>
 <p>请注意，输入数组是以**「引用」**方式传递的，这意味着在函数里修改输入数组对于调用者是可见的。</p>
 <p>你可以想象内部操作如下:</p>
-<div class="language-text line-numbers-mode" data-ext="text"><pre v-pre class="language-text"><code>// nums 是以“引用”方式传递的。也就是说，不对实参作任何拷贝
-int len = removeElement(nums, val);
+<div class="language-javascript line-numbers-mode" data-ext="js"><pre v-pre class="language-javascript"><code><span class="token comment">// nums 是以“引用”方式传递的。也就是说，不对实参作任何拷贝</span>
+int len <span class="token operator">=</span> <span class="token function">removeElement</span><span class="token punctuation">(</span>nums<span class="token punctuation">,</span> val<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-// 在函数里修改输入数组对于调用者是可见的。
-// 根据你的函数返回的长度, 它会打印出数组中 该长度范围内 的所有元素。
-for (int i = 0; i &lt; len; i++) {
-    print(nums[i]);
-}
+<span class="token comment">// 在函数里修改输入数组对于调用者是可见的。</span>
+<span class="token comment">// 根据你的函数返回的长度, 它会打印出数组中 该长度范围内 的所有元素。</span>
+<span class="token keyword">for</span> <span class="token punctuation">(</span>int i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> len<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">print</span><span class="token punctuation">(</span>nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><strong>示例 1：</strong></p>
 <div class="language-text line-numbers-mode" data-ext="text"><pre v-pre class="language-text"><code>输入：nums = [3,2,2,3], val = 3
 输出：2, nums = [2,2]
