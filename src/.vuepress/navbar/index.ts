@@ -9,21 +9,29 @@ export const zhNavbar = navbar([
     prefix: "/文章/分类/",
     children: [
       {
-        text: "this指向问题",
+        text: "leetcode算法",
         icon: "edit",
-        prefix: "js/this_problem/",
+        prefix: "算法/",
         children: [
-          { text: "改变this指向", icon: "edit", link: "改变this指向" },
-          { text: "箭头函数", icon: "edit", link: "箭头函数" }
+          { text: "双指针法", icon: "edit", link: "双指针法" },
+          { text: "最小覆盖子串", icon: "edit", link: "最小覆盖子串" },
         ],
       },
       {
         text: "学习笔记",
         icon: "edit",
-        prefix: "internet/",
+        prefix: "项目总结/",
         children: [
-          { text: "计网概念", icon: "edit", link: "NO1 计网体系结构/计算机网络的概念" },
-          { text: "体系结构", icon: "edit", link: "NO1 计网体系结构/体系结构&参考模型" }
+          { text: "个人博客网站的搭建", icon: "edit", link: "个人博客网站/个人博客网站" }
+        ],
+      },
+      {
+        text: "前端面试常考",
+        icon: "edit",
+        prefix: "js/Promise/",
+        children: [
+          { text: "Promise基本概念", icon: "edit", link: "Promise对象" },
+          { text: "手撕Promise", icon: "edit", link: "手写Promise" }
         ],
       },
     ],

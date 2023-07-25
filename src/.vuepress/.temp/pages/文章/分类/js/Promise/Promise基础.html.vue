@@ -4,6 +4,7 @@
 <p>一个 <strong><code v-pre>Promise</code></strong> 是一个代理，它代表一个在创建 promise 时不一定已知的值。它允许你将处理程序与异步操作的最终成功值或失败原因关联起来。这使得异步方法可以像同步方法一样返回值：异步方法不会立即返回最终值，而是返回一个 <em>promise</em>，以便在将来的某个时间点提供该值。</p>
 <p>一个待定的 Promise <em>最终状态</em>可以是<em>已兑现</em>并返回一个值，或者是<em>已拒绝</em>并返回一个原因（错误）。当其中任意一种情况发生时，通过 Promise 的 <code v-pre>then</code> 方法串联的处理程序将被调用。如果绑定相应处理程序时 Promise 已经兑现或拒绝，这处理程序将被立即调用，因此在异步操作完成和绑定处理程序之间不存在竞态条件。</p>
 <p>如果一个 Promise 已经被兑现或拒绝，即不再处于待定状态，那么则称之为已<em>敲定（settled）</em>。</p>
+<!-- more -->
 <h2 id="为什么要使用promise" tabindex="-1"><a class="header-anchor" href="#为什么要使用promise" aria-hidden="true">#</a> 为什么要使用Promise</h2>
 <ul>
 <li>

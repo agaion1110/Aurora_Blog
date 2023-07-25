@@ -23,6 +23,8 @@ copy.disableCopy: true
 
 如果一个 Promise 已经被兑现或拒绝，即不再处于待定状态，那么则称之为已*敲定（settled）*。
 
+<!-- more -->
+
 ## 为什么要使用Promise
 
 * 指定回调函数的方式更加灵活

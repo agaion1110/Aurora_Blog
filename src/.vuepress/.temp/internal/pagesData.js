@@ -33,6 +33,8 @@ export const pagesData = {
   "v-70586f3d": () => import(/* webpackChunkName: "v-70586f3d" */"E:/Blog/src/.vuepress/.temp/pages/文章/分类/Internet/计网体系结构/计算机网络的概念.html.js").then(({ data }) => data),
   // path: /%E6%96%87%E7%AB%A0/%E5%88%86%E7%B1%BB/js/Promise/Promise%E5%9F%BA%E7%A1%80.html
   "v-5882512f": () => import(/* webpackChunkName: "v-5882512f" */"E:/Blog/src/.vuepress/.temp/pages/文章/分类/js/Promise/Promise基础.html.js").then(({ data }) => data),
+  // path: /%E6%96%87%E7%AB%A0/%E5%88%86%E7%B1%BB/js/Promise/%E6%89%8B%E5%86%99Promise.html
+  "v-51b31d42": () => import(/* webpackChunkName: "v-51b31d42" */"E:/Blog/src/.vuepress/.temp/pages/文章/分类/js/Promise/手写Promise.html.js").then(({ data }) => data),
   // path: /%E6%96%87%E7%AB%A0/%E5%88%86%E7%B1%BB/js/this_problem/%E6%94%B9%E5%8F%98this%E6%8C%87%E5%90%91.html
   "v-978de902": () => import(/* webpackChunkName: "v-978de902" */"E:/Blog/src/.vuepress/.temp/pages/文章/分类/js/this_problem/改变this指向.html.js").then(({ data }) => data),
   // path: /%E6%96%87%E7%AB%A0/%E5%88%86%E7%B1%BB/js/this_problem/%E7%AE%AD%E5%A4%B4%E5%87%BD%E6%95%B0.html
