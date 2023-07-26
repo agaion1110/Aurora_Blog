@@ -31,25 +31,25 @@ copy.disableCopy: true
 
 ### 构造函数
 
-`Promise()`
+#### `Promise()`
 
 创建一个新的 `Promise` 对象。该构造函数主要用于封装还没有添加 promise 支持的函数。
 
 ### 静态方法
 
-`Promise.all()`
+#### `Promise.all()`
 
 接受一个 Promise 可迭代对象作为输入，并返回单个 `Promise`。返回的 Promise 在所有输入的 Promise 都兑现时（包括传入的可迭代对象为空时）被兑现，其值为一个包含所有兑现值的数组。如果输入的任何 Promise 被拒绝，返回的 Promise 也会被拒绝，并返回第一个拒绝的原因。
 
-`Promise.race()`
+#### `Promise.race()`
 
 接受一个 Promise 可迭代对象作为输入，并返回单个 `Promise`。返回的 Promise 与第一个敲定的 Promise 的最终状态保持一致。
 
-`Promise.reject()`
+#### `Promise.reject()`
 
 返回一个新的 `Promise` 对象，该对象以给定的原因拒绝。
 
-`Promise.resolve()`
+#### `Promise.resolve()`
 
 返回一个新的 `Promise` 对象，该对象以给定的值兑现。如果值是一个 thenable 对象（即具有 `then` 方法），则返回的 Promise 对象会“跟随”该 thenable 对象，采用其最终的状态；否则，返回的 Promise 对象会以该值兑现。
 
@@ -59,21 +59,21 @@ copy.disableCopy: true
 
 这些属性定义在 `Promise.prototype` 上，由所有的 `Promise` 实例共享。
 
-`Promise.prototype.constructor`
+#### `Promise.prototype.constructor`
 
 创建实例对象的构造函数。对于 `Promise` 实例，初始值为 `Promise` 构造函数。
 
-`Promise.prototype[@@toStringTag]`
+#### `Promise.prototype[@@toStringTag]`
 
 `@@toStringTag` 属性的初始值为字符串 `"Promise"`。该属性用于 `Object.prototype.toString()`。
 
 ### 实例方法
 
-`Promise.prototype.catch()`
+#### `Promise.prototype.catch()`
 
 将一个拒绝处理回调函数附加到 Promise 上，并返回一个新的 Promise，如果回调被调用，则解决为回调的返回值，如果 Promise 被兑现，解决为其原始兑现值。
 
-`Promise.prototype.then()`
+#### `Promise.prototype.then()`
 
 将一个兑现处理器和拒绝处理器附加到 Promise 上，并返回一个新的 Promise，解决为调用处理器得到的返回值，或者如果 Promise 没有被处理（即相关处理器 `onFulfilled` 或 `onRejected` 不是函数），则以原始敲定值解决。
 

@@ -18,6 +18,8 @@ copy.disableCopy: true
 
 在Vue中，computed属性用于计算某个属性的值，以响应式地更新视图。computed属性是基于它们的依赖进行缓存的，也就是说只有依赖发生变化时，computed属性才会重新计算。
 
+<!-- more -->
+
 computed属性通常是一个函数，在Vue实例中定义为一个对象的属性。以下是computed属性的用法示例：
 
 ```javascript

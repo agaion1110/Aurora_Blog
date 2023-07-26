@@ -1,6 +1,7 @@
 <template><div><h1 id="vue中计算属性computed" tabindex="-1"><a class="header-anchor" href="#vue中计算属性computed" aria-hidden="true">#</a> Vue中计算属性computed</h1>
 <h2 id="什么是计算属性" tabindex="-1"><a class="header-anchor" href="#什么是计算属性" aria-hidden="true">#</a> 什么是计算属性</h2>
 <p>在Vue中，computed属性用于计算某个属性的值，以响应式地更新视图。computed属性是基于它们的依赖进行缓存的，也就是说只有依赖发生变化时，computed属性才会重新计算。</p>
+<!-- more -->
 <p>computed属性通常是一个函数，在Vue实例中定义为一个对象的属性。以下是computed属性的用法示例：</p>
 <div class="language-javascript line-numbers-mode" data-ext="js"><pre v-pre class="language-javascript"><code><span class="token keyword">new</span> <span class="token class-name">Vue</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
   <span class="token literal-property property">data</span><span class="token operator">:</span> <span class="token punctuation">{</span>

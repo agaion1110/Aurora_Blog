@@ -10,28 +10,28 @@
 <!-- more -->
 <h2 id="promise对象" tabindex="-1"><a class="header-anchor" href="#promise对象" aria-hidden="true">#</a> Promise对象</h2>
 <h3 id="构造函数" tabindex="-1"><a class="header-anchor" href="#构造函数" aria-hidden="true">#</a> 构造函数</h3>
-<p><code v-pre>Promise()</code></p>
+<h4 id="promise" tabindex="-1"><a class="header-anchor" href="#promise" aria-hidden="true">#</a> <code v-pre>Promise()</code></h4>
 <p>创建一个新的 <code v-pre>Promise</code> 对象。该构造函数主要用于封装还没有添加 promise 支持的函数。</p>
 <h3 id="静态方法" tabindex="-1"><a class="header-anchor" href="#静态方法" aria-hidden="true">#</a> 静态方法</h3>
-<p><code v-pre>Promise.all()</code></p>
+<h4 id="promise-all" tabindex="-1"><a class="header-anchor" href="#promise-all" aria-hidden="true">#</a> <code v-pre>Promise.all()</code></h4>
 <p>接受一个 Promise 可迭代对象作为输入，并返回单个 <code v-pre>Promise</code>。返回的 Promise 在所有输入的 Promise 都兑现时（包括传入的可迭代对象为空时）被兑现，其值为一个包含所有兑现值的数组。如果输入的任何 Promise 被拒绝，返回的 Promise 也会被拒绝，并返回第一个拒绝的原因。</p>
-<p><code v-pre>Promise.race()</code></p>
+<h4 id="promise-race" tabindex="-1"><a class="header-anchor" href="#promise-race" aria-hidden="true">#</a> <code v-pre>Promise.race()</code></h4>
 <p>接受一个 Promise 可迭代对象作为输入，并返回单个 <code v-pre>Promise</code>。返回的 Promise 与第一个敲定的 Promise 的最终状态保持一致。</p>
-<p><code v-pre>Promise.reject()</code></p>
+<h4 id="promise-reject" tabindex="-1"><a class="header-anchor" href="#promise-reject" aria-hidden="true">#</a> <code v-pre>Promise.reject()</code></h4>
 <p>返回一个新的 <code v-pre>Promise</code> 对象，该对象以给定的原因拒绝。</p>
-<p><code v-pre>Promise.resolve()</code></p>
+<h4 id="promise-resolve" tabindex="-1"><a class="header-anchor" href="#promise-resolve" aria-hidden="true">#</a> <code v-pre>Promise.resolve()</code></h4>
 <p>返回一个新的 <code v-pre>Promise</code> 对象，该对象以给定的值兑现。如果值是一个 thenable 对象（即具有 <code v-pre>then</code> 方法），则返回的 Promise 对象会“跟随”该 thenable 对象，采用其最终的状态；否则，返回的 Promise 对象会以该值兑现。</p>
 <p>通常，如果你不知道一个值是否是 Promise，那么最好使用 <code v-pre>Promise.resolve(value)</code>]将其转换成 Promise 对象，并将返回值作为 Promise 来处理。</p>
 <h3 id="实例属性" tabindex="-1"><a class="header-anchor" href="#实例属性" aria-hidden="true">#</a> 实例属性</h3>
 <p>这些属性定义在 <code v-pre>Promise.prototype</code> 上，由所有的 <code v-pre>Promise</code> 实例共享。</p>
-<p><code v-pre>Promise.prototype.constructor</code></p>
+<h4 id="promise-prototype-constructor" tabindex="-1"><a class="header-anchor" href="#promise-prototype-constructor" aria-hidden="true">#</a> <code v-pre>Promise.prototype.constructor</code></h4>
 <p>创建实例对象的构造函数。对于 <code v-pre>Promise</code> 实例，初始值为 <code v-pre>Promise</code> 构造函数。</p>
-<p><code v-pre>Promise.prototype[@@toStringTag]</code></p>
+<h4 id="promise-prototype-tostringtag" tabindex="-1"><a class="header-anchor" href="#promise-prototype-tostringtag" aria-hidden="true">#</a> <code v-pre>Promise.prototype[@@toStringTag]</code></h4>
 <p><code v-pre>@@toStringTag</code> 属性的初始值为字符串 <code v-pre>&quot;Promise&quot;</code>。该属性用于 <code v-pre>Object.prototype.toString()</code>。</p>
 <h3 id="实例方法" tabindex="-1"><a class="header-anchor" href="#实例方法" aria-hidden="true">#</a> 实例方法</h3>
-<p><code v-pre>Promise.prototype.catch()</code></p>
+<h4 id="promise-prototype-catch" tabindex="-1"><a class="header-anchor" href="#promise-prototype-catch" aria-hidden="true">#</a> <code v-pre>Promise.prototype.catch()</code></h4>
 <p>将一个拒绝处理回调函数附加到 Promise 上，并返回一个新的 Promise，如果回调被调用，则解决为回调的返回值，如果 Promise 被兑现，解决为其原始兑现值。</p>
-<p><code v-pre>Promise.prototype.then()</code></p>
+<h4 id="promise-prototype-then" tabindex="-1"><a class="header-anchor" href="#promise-prototype-then" aria-hidden="true">#</a> <code v-pre>Promise.prototype.then()</code></h4>
 <p>将一个兑现处理器和拒绝处理器附加到 Promise 上，并返回一个新的 Promise，解决为调用处理器得到的返回值，或者如果 Promise 没有被处理（即相关处理器 <code v-pre>onFulfilled</code> 或 <code v-pre>onRejected</code> 不是函数），则以原始敲定值解决。</p>
 <h2 id="手写promise对象" tabindex="-1"><a class="header-anchor" href="#手写promise对象" aria-hidden="true">#</a> 手写Promise对象</h2>
 <h3 id="定义整体结构" tabindex="-1"><a class="header-anchor" href="#定义整体结构" aria-hidden="true">#</a> 定义整体结构</h3>
