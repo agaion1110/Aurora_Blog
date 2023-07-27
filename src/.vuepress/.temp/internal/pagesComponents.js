@@ -43,8 +43,12 @@ export const pagesComponents = {
   "v-978de902": defineAsyncComponent(() => import(/* webpackChunkName: "v-978de902" */"E:/Blog/src/.vuepress/.temp/pages/文章/分类/js/this_problem/改变this指向.html.vue")),
   // path: /%E6%96%87%E7%AB%A0/%E5%88%86%E7%B1%BB/js/this_problem/%E7%AE%AD%E5%A4%B4%E5%87%BD%E6%95%B0.html
   "v-40da31cf": defineAsyncComponent(() => import(/* webpackChunkName: "v-40da31cf" */"E:/Blog/src/.vuepress/.temp/pages/文章/分类/js/this_problem/箭头函数.html.vue")),
+  // path: /%E6%96%87%E7%AB%A0/%E5%88%86%E7%B1%BB/Vue/%E7%BB%84%E4%BB%B6%E9%97%B4%E6%B6%88%E6%81%AF%E7%9A%84%E4%BC%A0%E9%80%92/Pinia%E7%8A%B6%E6%80%81%E7%AE%A1%E7%90%86.html
+  "v-93e441b4": defineAsyncComponent(() => import(/* webpackChunkName: "v-93e441b4" */"E:/Blog/src/.vuepress/.temp/pages/文章/分类/Vue/组件间消息的传递/Pinia状态管理.html.vue")),
   // path: /%E6%96%87%E7%AB%A0/%E5%88%86%E7%B1%BB/Vue/%E7%BB%84%E4%BB%B6%E9%97%B4%E6%B6%88%E6%81%AF%E7%9A%84%E4%BC%A0%E9%80%92/props%E4%BC%A0%E5%8F%82.html
   "v-d99cfb18": defineAsyncComponent(() => import(/* webpackChunkName: "v-d99cfb18" */"E:/Blog/src/.vuepress/.temp/pages/文章/分类/Vue/组件间消息的传递/props传参.html.vue")),
+  // path: /%E6%96%87%E7%AB%A0/%E5%88%86%E7%B1%BB/Vue/%E7%BB%84%E4%BB%B6%E9%97%B4%E6%B6%88%E6%81%AF%E7%9A%84%E4%BC%A0%E9%80%92/provide-inject.html
+  "v-0d0b4d5c": defineAsyncComponent(() => import(/* webpackChunkName: "v-0d0b4d5c" */"E:/Blog/src/.vuepress/.temp/pages/文章/分类/Vue/组件间消息的传递/provide-inject.html.vue")),
   // path: /%E6%96%87%E7%AB%A0/%E5%88%86%E7%B1%BB/Vue/%E7%BB%84%E4%BB%B6%E9%97%B4%E6%B6%88%E6%81%AF%E7%9A%84%E4%BC%A0%E9%80%92/v-model.html
   "v-0f383d9e": defineAsyncComponent(() => import(/* webpackChunkName: "v-0f383d9e" */"E:/Blog/src/.vuepress/.temp/pages/文章/分类/Vue/组件间消息的传递/v-model.html.vue")),
   // path: /%E6%96%87%E7%AB%A0/%E5%88%86%E7%B1%BB/Vue/%E7%BB%84%E4%BB%B6%E9%97%B4%E6%B6%88%E6%81%AF%E7%9A%84%E4%BC%A0%E9%80%92/%E8%87%AA%E5%AE%9A%E4%B9%89%E4%BA%8B%E4%BB%B6.html
