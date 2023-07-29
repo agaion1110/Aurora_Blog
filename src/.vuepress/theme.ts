@@ -39,7 +39,7 @@ export default hopeTheme({
       navbar: zhNavbar,
 
       // sidebar
-      sidebar: zhSidebar,
+      //sidebar: zhSidebar,
 
       footer: "大家一起进步哈(●'◡'●)",
 
@@ -59,7 +59,7 @@ export default hopeTheme({
       navbar: zhNavbar,
 
       // sidebar
-      sidebar: zhSidebar,
+      //sidebar: zhSidebar,
 
       footer: "大家一起进步哈(●'◡'●)",
 
