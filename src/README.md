@@ -12,7 +12,7 @@ bgImageStyle:
   - background-attachment: fixed
 heroText: Aurora's Blog
 heroFullScreen: true
-tagline: 没有BUG的代码是不完美的！
+tagline: 你可以期待太阳从东方升起，而风却随心所欲地从四面八方吹来。
 projects:
   - icon: project
     name: 项目名称

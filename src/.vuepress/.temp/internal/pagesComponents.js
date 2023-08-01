@@ -7,6 +7,8 @@ export const pagesComponents = {
   "v-21b02116": defineAsyncComponent(() => import(/* webpackChunkName: "v-21b02116" */"E:/Blog/src/.vuepress/.temp/pages/文章/intro.html.vue")),
   // path: /%E6%96%87%E7%AB%A0/%E5%88%86%E7%B1%BB/AJAX/AJAX.html
   "v-9fac680a": defineAsyncComponent(() => import(/* webpackChunkName: "v-9fac680a" */"E:/Blog/src/.vuepress/.temp/pages/文章/分类/AJAX/AJAX.html.vue")),
+  // path: /%E6%96%87%E7%AB%A0/%E5%88%86%E7%B1%BB/AJAX/Axios%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8.html
+  "v-f187e33c": defineAsyncComponent(() => import(/* webpackChunkName: "v-f187e33c" */"E:/Blog/src/.vuepress/.temp/pages/文章/分类/AJAX/Axios的基本使用.html.vue")),
   // path: /%E6%96%87%E7%AB%A0/%E5%88%86%E7%B1%BB/ECMAScript/es6%E5%B8%B8%E7%94%A8%E7%9F%A5%E8%AF%86%E7%82%B9.html
   "v-44816efd": defineAsyncComponent(() => import(/* webpackChunkName: "v-44816efd" */"E:/Blog/src/.vuepress/.temp/pages/文章/分类/ECMAScript/es6常用知识点.html.vue")),
   // path: /%E6%96%87%E7%AB%A0/%E5%88%86%E7%B1%BB/js/JS%E8%AF%BB%E5%8F%96%E5%B1%9E%E6%80%A7%E6%97%B6%E7%94%A8__%E5%92%8C%E7%94%A8.%E7%9A%84%E5%8C%BA%E5%88%AB.html
@@ -63,6 +65,8 @@ export const pagesComponents = {
   "v-6794bb83": defineAsyncComponent(() => import(/* webpackChunkName: "v-6794bb83" */"E:/Blog/src/.vuepress/.temp/pages/文章/分类/项目总结/个人博客网站/个人博客网站.html.vue")),
   // path: /%E6%96%87%E7%AB%A0/%E5%88%86%E7%B1%BB/%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99/%E9%83%A8%E7%BD%B2%E4%B8%8A%E7%BA%BF.html
   "v-d1658ea4": defineAsyncComponent(() => import(/* webpackChunkName: "v-d1658ea4" */"E:/Blog/src/.vuepress/.temp/pages/文章/分类/项目总结/个人博客网站/部署上线.html.vue")),
+  // path: /%E6%96%87%E7%AB%A0/%E5%88%86%E7%B1%BB/%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93/%E8%BF%90%E8%90%A5%E5%B9%B3%E5%8F%B0/API%E6%8E%A5%E5%8F%A3%E7%BB%9F%E4%B8%80%E7%AE%A1%E7%90%86.html
+  "v-7ade7abc": defineAsyncComponent(() => import(/* webpackChunkName: "v-7ade7abc" */"E:/Blog/src/.vuepress/.temp/pages/文章/分类/项目总结/运营平台/API接口统一管理.html.vue")),
   // path: /404.html
   "v-3706649a": defineAsyncComponent(() => import(/* webpackChunkName: "v-3706649a" */"E:/Blog/src/.vuepress/.temp/pages/404.html.vue")),
   // path: /%E6%96%87%E7%AB%A0/
@@ -97,6 +101,8 @@ export const pagesComponents = {
   "v-8685ed74": defineAsyncComponent(() => import(/* webpackChunkName: "v-8685ed74" */"E:/Blog/src/.vuepress/.temp/pages/文章/分类/项目总结/个人博客网站/index.html.vue")),
   // path: /%E6%96%87%E7%AB%A0/%E5%88%86%E7%B1%BB/%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93/
   "v-18047b0e": defineAsyncComponent(() => import(/* webpackChunkName: "v-18047b0e" */"E:/Blog/src/.vuepress/.temp/pages/文章/分类/项目总结/index.html.vue")),
+  // path: /%E6%96%87%E7%AB%A0/%E5%88%86%E7%B1%BB/%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93/%E8%BF%90%E8%90%A5%E5%B9%B3%E5%8F%B0/
+  "v-32d5f586": defineAsyncComponent(() => import(/* webpackChunkName: "v-32d5f586" */"E:/Blog/src/.vuepress/.temp/pages/文章/分类/项目总结/运营平台/index.html.vue")),
   // path: /category/
   "v-5bc93818": defineAsyncComponent(() => import(/* webpackChunkName: "v-5bc93818" */"E:/Blog/src/.vuepress/.temp/pages/category/index.html.vue")),
   // path: /tag/
@@ -139,8 +145,6 @@ export const pagesComponents = {
   "v-206dfa1c": defineAsyncComponent(() => import(/* webpackChunkName: "v-206dfa1c" */"E:/Blog/src/.vuepress/.temp/pages/category/项目总结/index.html.vue")),
   // path: /tag/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/
   "v-7812146a": defineAsyncComponent(() => import(/* webpackChunkName: "v-7812146a" */"E:/Blog/src/.vuepress/.temp/pages/tag/计算机网络/index.html.vue")),
-  // path: /category/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/
-  "v-15bf49ec": defineAsyncComponent(() => import(/* webpackChunkName: "v-15bf49ec" */"E:/Blog/src/.vuepress/.temp/pages/category/项目管理/index.html.vue")),
   // path: /tag/promise/
   "v-51aa3ec2": defineAsyncComponent(() => import(/* webpackChunkName: "v-51aa3ec2" */"E:/Blog/src/.vuepress/.temp/pages/tag/promise/index.html.vue")),
   // path: /tag/this%E6%8C%87%E5%90%91%E9%97%AE%E9%A2%98/
