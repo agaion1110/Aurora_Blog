@@ -1,4 +1,4 @@
-# 博客地址 http://118.24.93.28/
+# 博客地址 http://wei-z.top/
 ## 初始化项目
 ### 安装vuepress
 ``` shell
