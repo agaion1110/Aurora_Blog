@@ -1,0 +1,54 @@
+<template><div><h1 id="反转链表" tabindex="-1"><a class="header-anchor" href="#反转链表" aria-hidden="true">#</a> 反转链表</h1>
+<h2 id="题目" tabindex="-1"><a class="header-anchor" href="#题目" aria-hidden="true">#</a> 题目</h2>
+<p>给你单链表的头节点 <code v-pre>head</code> ，请你反转链表，并返回反转后的链表。</p>
+<!--more-->
+<p><strong>示例 1：</strong></p>
+<figure><img src="https://assets.leetcode.com/uploads/2021/02/19/rev1ex1.jpg" alt="img" tabindex="0" loading="lazy"><figcaption>img</figcaption></figure>
+<div class="language-text line-numbers-mode" data-ext="text"><pre v-pre class="language-text"><code>输入：head = [1,2,3,4,5]
+输出：[5,4,3,2,1]
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><p><strong>示例 2：</strong></p>
+<figure><img src="https://assets.leetcode.com/uploads/2021/02/19/rev1ex2.jpg" alt="img" tabindex="0" loading="lazy"><figcaption>img</figcaption></figure>
+<div class="language-text line-numbers-mode" data-ext="text"><pre v-pre class="language-text"><code>输入：head = [1,2]
+输出：[2,1]
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><p><strong>示例 3：</strong></p>
+<div class="language-text line-numbers-mode" data-ext="text"><pre v-pre class="language-text"><code>输入：head = []
+输出：[]
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="头插法反转解题思路" tabindex="-1"><a class="header-anchor" href="#头插法反转解题思路" aria-hidden="true">#</a> 头插法反转解题思路</h3>
+<p>定义一个新的链表和一个临时节点，遍历原链表并保存每一个节点的next指针，将该节点加入新链表头指针后的一个节点。循环遍历，原链表的最后一个节点即是新链表的第一个有效值节点。</p>
+<h3 id="代码" tabindex="-1"><a class="header-anchor" href="#代码" aria-hidden="true">#</a> 代码</h3>
+<div class="language-javascript line-numbers-mode" data-ext="js"><pre v-pre class="language-javascript"><code><span class="token doc-comment comment">/**
+ * <span class="token keyword">@param</span> <span class="token class-name"><span class="token punctuation">{</span>ListNode<span class="token punctuation">}</span></span> <span class="token parameter">head</span>
+ * <span class="token keyword">@return</span> <span class="token class-name"><span class="token punctuation">{</span>ListNode<span class="token punctuation">}</span></span>
+ */</span>
+<span class="token keyword">var</span> <span class="token function-variable function">reverseList</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">head</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> p <span class="token operator">=</span>head<span class="token punctuation">;</span>
+    <span class="token keyword">let</span> q <span class="token operator">=</span><span class="token keyword">new</span> <span class="token class-name">ListNode</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">while</span><span class="token punctuation">(</span>p<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">let</span> x<span class="token operator">=</span>p<span class="token punctuation">.</span>next<span class="token punctuation">;</span>
+        p<span class="token punctuation">.</span>next <span class="token operator">=</span> q<span class="token punctuation">.</span>next
+        q<span class="token punctuation">.</span>next <span class="token operator">=</span> p<span class="token punctuation">;</span>
+        p<span class="token operator">=</span>x<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> q<span class="token punctuation">.</span>next<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="迭代解题思路" tabindex="-1"><a class="header-anchor" href="#迭代解题思路" aria-hidden="true">#</a> 迭代解题思路</h3>
+<p>直接改变每一个指针方向，对原链表每一个指针方向进行改变达到反转链表的效果。在遍历链表时，将当前节点的 next 指针改为指向前一个节点。由于节点没有引用其前一个节点，因此必须事先存储其前一个节点。在更改引用之前，还需要存储后一个节点。最后返回新的头引用。</p>
+<h3 id="代码-1" tabindex="-1"><a class="header-anchor" href="#代码-1" aria-hidden="true">#</a> 代码</h3>
+<div class="language-javascript line-numbers-mode" data-ext="js"><pre v-pre class="language-javascript"><code><span class="token doc-comment comment">/**
+ * <span class="token keyword">@param</span> <span class="token class-name"><span class="token punctuation">{</span>ListNode<span class="token punctuation">}</span></span> <span class="token parameter">head</span>
+ * <span class="token keyword">@return</span> <span class="token class-name"><span class="token punctuation">{</span>ListNode<span class="token punctuation">}</span></span>
+ */</span>
+<span class="token keyword">var</span> <span class="token function-variable function">reverseList</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">head</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> tail <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span><span class="token comment">//首先定义一个尾指针，让它从原链表的头开始依次往前，直到原链表的头指针</span>
+    <span class="token keyword">let</span> p <span class="token operator">=</span> head<span class="token punctuation">;</span><span class="token comment">//定义一个p不改变原链表地址</span>
+    <span class="token keyword">while</span><span class="token punctuation">(</span>p<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">let</span> x <span class="token operator">=</span> p<span class="token punctuation">.</span>next<span class="token punctuation">;</span><span class="token comment">//保存下一个节点位置</span>
+        p<span class="token punctuation">.</span>next <span class="token operator">=</span> tail<span class="token punctuation">;</span><span class="token comment">//将本节点的指针指向tail后位链表（新链表该节点之后的链表）</span>
+        tail <span class="token operator">=</span> p<span class="token punctuation">;</span><span class="token comment">//赋值tail，使tail添加上本节点形成新的后位链表</span>
+        p <span class="token operator">=</span> x<span class="token punctuation">;</span><span class="token comment">//移动p指针，遍历原链表</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> tail<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></div></template>
+
+

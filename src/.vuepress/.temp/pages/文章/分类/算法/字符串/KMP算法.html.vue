@@ -1,0 +1,56 @@
+<template><div><h1 id="kmp算法" tabindex="-1"><a class="header-anchor" href="#kmp算法" aria-hidden="true">#</a> KMP算法</h1>
+<h2 id="什么时kmp算法" tabindex="-1"><a class="header-anchor" href="#什么时kmp算法" aria-hidden="true">#</a> 什么时KMP算法</h2>
+<p><strong>KMP算法是一种改进的字符串匹配算法</strong></p>
+<p>由D.E.Knuth，J.H.Morris和      V.R.Pratt提出的，因此人们称它为克努特—莫里斯—普拉特操作（简称KMP算法）。</p>
+<p>KMP的主要思想是<strong>当出现字符串不匹配时，可以知道一部分之前已经匹配的文本内容，可以利用这些信息避免从头再去做匹配了。</strong></p>
+<p>所以如何记录已经匹配的文本内容，是KMP的重点，也就是next数组。</p>
+<!-- more -->
+<h2 id="next数组" tabindex="-1"><a class="header-anchor" href="#next数组" aria-hidden="true">#</a> next数组</h2>
+<p>next数组其实就是<strong>模式字符串（模式串）的前缀表<code v-pre>prefix</code></strong>，前缀表是用来回退的，它记录了模式串与主串(文本串)不匹配的时候，模式串应该从哪里开始重新匹配。</p>
+<p>要弄懂这些，我们首先要了解一下几点问题：</p>
+<blockquote>
+<ul>
+<li>前缀：包含首位字符但不会包含末位字符的子串；</li>
+<li>后缀：包含末位字符但不包含首位字符的子串。</li>
+<li>next数组的定义：当主串与模式串的某一字符不匹配时，模式串要回退的位置（<strong>即在匹配过程中，当一次匹配失败时，下一次的匹配不不用冲模式串的第一位位开始匹配</strong>）；</li>
+<li>next[j]：其值 = 第j位字符前面j-1位字符组成的子串的前后重合字符数+1。</li>
+</ul>
+</blockquote>
+<p>规律：</p>
+<ol>
+<li>next[j]的值每次最多增加1</li>
+<li>模式串的组后一位字符不影响next数组的结果</li>
+</ol>
+<p>求next[j]数组的代码：</p>
+<div class="language-javascript line-numbers-mode" data-ext="js"><pre v-pre class="language-javascript"><code><span class="token doc-comment comment">/**
+ * <span class="token keyword">@param</span> <span class="token class-name"><span class="token punctuation">{</span>string<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">}</span></span> <span class="token parameter">ch</span>
+ * <span class="token keyword">@param</span> <span class="token class-name"><span class="token punctuation">{</span>int<span class="token punctuation">}</span></span> <span class="token parameter">length</span>
+ * <span class="token keyword">@param</span> <span class="token class-name"><span class="token punctuation">{</span>int<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">}</span></span> <span class="token parameter">next</span>
+ */</span>
+<span class="token keyword">function</span> <span class="token function">getNext</span><span class="token punctuation">(</span><span class="token parameter">ch<span class="token punctuation">,</span>length<span class="token punctuation">,</span>next</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+	next<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">,</span>j <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token keyword">while</span><span class="token punctuation">(</span>i<span class="token operator">&lt;=</span>length<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>j<span class="token operator">==</span><span class="token number">0</span><span class="token operator">||</span>ch<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">==</span>ch<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">)</span> next<span class="token punctuation">[</span><span class="token operator">++</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token operator">++</span>j<span class="token punctuation">;</span>
+        <span class="token keyword">else</span> j <span class="token operator">=</span> next<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>例：</p>
+<div class="language-text line-numbers-mode" data-ext="text"><pre v-pre class="language-text"><code>	  j:1 2 3 4 5 6 
+	  p:a b a b a ?(模式串最后一位对next[j]数组是没有影响的)
+next[j]:0 1 1 2 3 4 
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>这里代码的主要思想是回溯，且next[i]值的意义是第i位字符前的字符串的最长公共前后缀的长度+1。</p>
+<p>我们首先初始化<code v-pre>next[1]=0</code>，接着在<code v-pre>next[1]</code>基础上按顺序向后一一遍历，那么我们要求<code v-pre>next[i]</code>的值时，我们即已经知道<code v-pre>next[i-1]</code>的值假设它的值是<code v-pre>j</code>，那么接意味着在数组中从第<code v-pre>1</code>位第<code v-pre>i-2</code>位的最长相等前后缀是<code v-pre>j-1</code>，也就是说在模式串<code v-pre>next[1] ~ next[i-2]</code>的范围中：<code v-pre>1</code> ~ <code v-pre>j-1</code>和 <code v-pre>i-j+1</code> ~ <code v-pre>i-2</code>这两段长度为<code v-pre>j-1</code>的字符串是完全相等的。这是要分两种情况，即第<code v-pre>j</code>位字符和第<code v-pre>i-1</code>位字符相等，另一种是不相等：</p>
+<ol>
+<li>这时一旦第<code v-pre>j</code>位字符和第<code v-pre>i-1</code>位字符又相等的话，那么<code v-pre>next[i]</code>的最长公共前后缀就是<code v-pre>next[j-1]+1</code>,因为后缀多出来的一位字符和前缀多出来的一位字符相等，这是最长公共前后缀自然要加1。</li>
+<li>但如果此时第<code v-pre>j</code>位字符和第<code v-pre>i-1</code>位字符不相等，那么此时我们找第j位前的最长公共前后缀即<code v-pre>next[j]-1</code>，此时我们可以知道<code v-pre>next[0 ~ next[j-1]]</code> = <code v-pre>next[next[j-1]-j+1 ~ j]</code> 。也就是说，我们以<code v-pre>j</code>为分隔点，先将模式串前后分为两段，前后两段除追后一位不相等外其他完全相等，那么前半部分满足这样的等式，意味着后半部分同样满足着这样的等式，即此时我们得到模式串的前i-1项又四段相等的子串，第一段和第四段相等。即<code v-pre>next[0 ~ next[j-1]]</code> = <code v-pre>next[next[j]-i+1 ~ i-2]</code>。到了这里是否似曾相识，没错，这里就是回溯第一遍的结果，那么再一次出现两种情况，即第next[j-1]+1项和i-1项时否相等：
+<ol>
+<li>相等的话next[i]的最长公共前后缀，就是刚刚比较的两段子串的长度加1即<code v-pre>next[j-1]+1</code>。</li>
+<li>若不相等，那么我们就需要再一次寻找相等的子串。此时将找到第<code v-pre>next[j-1]</code>位前的最长1公共前后缀。</li>
+</ol>
+</li>
+<li>依次循环，知道找到相等，或者即将回溯到下标为0时停止递归，此时说明没有公共前后缀，那么赋值为1也就是j+1（因为此时j为0）。</li>
+</ol>
+</div></template>
+
+
