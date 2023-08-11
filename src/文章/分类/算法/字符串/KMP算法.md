@@ -50,13 +50,18 @@ next数组其实就是**模式字符串（模式串）的前缀表`prefix`**，�
  * @param {int} length
  * @param {int[]} next
  */
-function getNext(ch,length,next){
-	next[1] = 0;
-    let i = 1,j = 0;
-    while(i<=length){
-        if(j==0||ch[i]==ch[j]) next[++i] = ++j;
-        else j = next[j];
+function getNext(needle) {
+    let next = [];
+    let j = 0;
+    next.push(j);
+    for (let i = 1; i < needle.length; ++i) {
+        while (j > 0 && needle[i] !== needle[j])
+            j = next[j - 1];
+        if (needle[i] === needle[j])
+            j++;
+        next.push(j);
     }
+    return next;
 }
 ```
 
@@ -78,4 +83,24 @@ next[j]:0 1 1 2 3 4
    2. 若不相等，那么我们就需要再一次寻找相等的子串。此时将找到第`next[j-1]`位前的最长1公共前后缀。
 3. 
     依次循环，知道找到相等，或者即将回溯到下标为0时停止递归，此时说明没有公共前后缀，那么赋值为1也就是j+1（因为此时j为0）。
+
+## KMP模式匹配算法
+
+```js
+var strStr = function (haystack, needle) {
+    if (needle.length === 0)
+        return 0;
+    let next = getNext(needle);
+    let j = 0;
+    for (let i = 0; i < haystack.length; ++i) {
+        while (j > 0 && haystack[i] !== needle[j])
+            j = next[j - 1];
+        if (haystack[i] === needle[j])
+            j++;
+        if (j === needle.length)
+            return (i - needle.length + 1);
+    }
+    return -1;
+};
+```
 
