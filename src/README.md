@@ -12,7 +12,7 @@ bgImageStyle:
   - background-attachment: fixed
 heroText: Aurora's Blog
 heroFullScreen: true
-tagline: 你可以期待太阳从东方升起，而风却随心所欲地从四面八方吹来。
+tagline: 关关难过关关过，前路漫漫亦灿烂。夜夜难熬夜夜熬，往事坎坎亦澜澜。
 projects:
   - icon: project
     name: 项目名称
