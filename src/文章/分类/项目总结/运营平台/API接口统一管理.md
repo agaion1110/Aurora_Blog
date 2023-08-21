@@ -19,7 +19,7 @@ copy.disableCopy: true
 
 ## axios二次封装
 
-对于axios不熟悉的话，建议先学习这篇文章:<a href="http://118.24.93.28/文章/分类/AJAX/Axios的基本使用.html">Axios的基本使用</a>
+对于axios不熟悉的话，建议先学习这篇文章:<a href="http://wei-z.top/文章/分类/AJAX/Axios的基本使用.html">Axios的基本使用</a>
 
 在开发项目的时候避免不了与后端进行交互,因此我们需要使用axios插件实现发送网络请求。在开发项目的时候
 
