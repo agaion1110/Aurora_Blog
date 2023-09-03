@@ -8,12 +8,18 @@ devDependencies:
   '@vuepress/client':
     specifier: 2.0.0-beta.66
     version: registry.npmmirror.com/@vuepress/client@2.0.0-beta.66
+  '@vuepress/plugin-search':
+    specifier: 2.0.0-beta.66
+    version: registry.npmmirror.com/@vuepress/plugin-search@2.0.0-beta.66
   vue:
     specifier: ^3.3.4
     version: registry.npmmirror.com/vue@3.3.4
   vuepress:
     specifier: 2.0.0-beta.66
     version: registry.npmmirror.com/vuepress@2.0.0-beta.66(@vuepress/client@2.0.0-beta.66)(vue@3.3.4)
+  vuepress-plugin-cursor-effects:
+    specifier: ^1.1.6
+    version: registry.npmmirror.com/vuepress-plugin-cursor-effects@1.1.6
   vuepress-theme-hope:
     specifier: 2.0.0-beta.235
     version: registry.npmmirror.com/vuepress-theme-hope@2.0.0-beta.235(vuepress@2.0.0-beta.66)
@@ -2086,6 +2092,30 @@ packages:
       markdown-it: registry.npmmirror.com/markdown-it@13.0.1
     dev: true
 
+  registry.npmmirror.com/@moefy-canvas/core@0.5.2:
+    resolution: {integrity: sha512-XkaVE91Tiwb35zFmI1DbrJpMh0xe54QbzQrc7ATwMos4C08dxBnwExwXEVS7oEct7owVDY1UWxtRRVE7smtzHw==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@moefy-canvas/core/-/core-0.5.2.tgz}
+    name: '@moefy-canvas/core'
+    version: 0.5.2
+    dev: true
+
+  registry.npmmirror.com/@moefy-canvas/theme-popper@0.5.2:
+    resolution: {integrity: sha512-s6Gy27DKTLm2un5Od3fsAonnd7lN4pgyLXJ/omXisAZpVLbPg/Q5/QKpJLZvQ/08qNrn6X/GZjnWwvsHbJTBNw==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@moefy-canvas/theme-popper/-/theme-popper-0.5.2.tgz}
+    name: '@moefy-canvas/theme-popper'
+    version: 0.5.2
+    dependencies:
+      '@moefy-canvas/core': registry.npmmirror.com/@moefy-canvas/core@0.5.2
+      '@moefy-canvas/utils': registry.npmmirror.com/@moefy-canvas/utils@0.5.2
+      ts-debounce: registry.npmmirror.com/ts-debounce@4.0.0
+    dev: true
+
+  registry.npmmirror.com/@moefy-canvas/utils@0.5.2:
+    resolution: {integrity: sha512-DnI8I/cTBFfn3xoXwyyLEtye4pMI6zJFMxU1qps731xgYTWmzBqJPkZZd/2gfNnH5NnLUOGG7Ui3sMkmJ0vg0w==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@moefy-canvas/utils/-/utils-0.5.2.tgz}
+    name: '@moefy-canvas/utils'
+    version: 0.5.2
+    dependencies:
+      '@moefy-canvas/core': registry.npmmirror.com/@moefy-canvas/core@0.5.2
+    dev: true
+
   registry.npmmirror.com/@nodelib/fs.scandir@2.1.5:
     resolution: {integrity: sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@nodelib/fs.scandir/-/fs.scandir-2.1.5.tgz}
     name: '@nodelib/fs.scandir'
@@ -2276,7 +2306,7 @@ packages:
     name: '@types/markdown-it-emoji'
     version: 2.0.2
     dependencies:
-      '@types/markdown-it': registry.npmmirror.com/@types/markdown-it@12.2.3
+      '@types/markdown-it': registry.npmmirror.com/@types/markdown-it@13.0.0
     dev: true
 
   registry.npmmirror.com/@types/markdown-it@12.2.3:
@@ -2348,7 +2378,7 @@ packages:
     name: '@types/sax'
     version: 1.2.4
     dependencies:
-      '@types/node': registry.npmmirror.com/@types/node@17.0.45
+      '@types/node': registry.npmmirror.com/@types/node@20.5.3
     dev: true
 
   registry.npmmirror.com/@types/trusted-types@2.0.3:
@@ -2729,6 +2759,23 @@ packages:
     dependencies:
       '@vuepress/core': registry.npmmirror.com/@vuepress/core@2.0.0-beta.66
       prismjs: registry.npmmirror.com/prismjs@1.29.0
+    transitivePeerDependencies:
+      - '@vue/composition-api'
+      - supports-color
+    dev: true
+
+  registry.npmmirror.com/@vuepress/plugin-search@2.0.0-beta.66:
+    resolution: {integrity: sha512-OeAaTOBnBwIH1xyleyHGOVjgJNdGvbCPocNbnJOAjTaV6K5FeNgBlX338Kqw0adu2E4DK90UapYDmiXZH/BLAg==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@vuepress/plugin-search/-/plugin-search-2.0.0-beta.66.tgz}
+    name: '@vuepress/plugin-search'
+    version: 2.0.0-beta.66
+    dependencies:
+      '@vuepress/client': registry.npmmirror.com/@vuepress/client@2.0.0-beta.66
+      '@vuepress/core': registry.npmmirror.com/@vuepress/core@2.0.0-beta.66
+      '@vuepress/shared': registry.npmmirror.com/@vuepress/shared@2.0.0-beta.66
+      '@vuepress/utils': registry.npmmirror.com/@vuepress/utils@2.0.0-beta.66
+      chokidar: registry.npmmirror.com/chokidar@3.5.3
+      vue: registry.npmmirror.com/vue@3.3.4
+      vue-router: registry.npmmirror.com/vue-router@4.2.4(vue@3.3.4)
     transitivePeerDependencies:
       - '@vue/composition-api'
       - supports-color
@@ -7378,6 +7425,14 @@ packages:
     transitivePeerDependencies:
       - '@vue/composition-api'
       - supports-color
+    dev: true
+
+  registry.npmmirror.com/vuepress-plugin-cursor-effects@1.1.6:
+    resolution: {integrity: sha512-4qXL2flMQcd6ecp+LhdChspobhdb9fkAfmRjRs2K3a/DiwtQtOE24jaVFCClwhfDpYuRe48a0KVeROYkdiWuXg==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/vuepress-plugin-cursor-effects/-/vuepress-plugin-cursor-effects-1.1.6.tgz}
+    name: vuepress-plugin-cursor-effects
+    version: 1.1.6
+    dependencies:
+      '@moefy-canvas/theme-popper': registry.npmmirror.com/@moefy-canvas/theme-popper@0.5.2
     dev: true
 
   registry.npmmirror.com/vuepress-plugin-feed2@2.0.0-beta.235(vuepress@2.0.0-beta.66):

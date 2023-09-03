@@ -12,7 +12,7 @@ bgImageStyle:
   - background-attachment: fixed
 heroText: Aurora's Blog
 heroFullScreen: true
-tagline: 关关难过关关过，前路漫漫亦灿烂。夜夜难熬夜夜熬，往事坎坎亦澜澜。
+tagline: 关关难过关关过，前路漫漫亦灿烂。
 projects:
   - icon: project
     name: 项目名称
