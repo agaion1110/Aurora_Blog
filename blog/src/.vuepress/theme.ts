@@ -1,7 +1,8 @@
-import { hopeTheme } from "vuepress-theme-hope";
+// import { hopeTheme } from "vuepress-theme-hope";
+import {MyTheme} from "./theme/index";
 import navbar from "./navbar.js";
 
-export default hopeTheme({
+export default MyTheme({
   hostname: "https://wei-z.top",
   author: {
     name: "Aurora",
@@ -21,7 +22,7 @@ export default hopeTheme({
 
   footer: "大家一起进步哈(●'◡'●)",
 
-  displayFooter: true,
+  displayFooter: false,
 
   blog: {
     description: "一个前端萌新🐸",
@@ -41,7 +42,7 @@ export default hopeTheme({
 
   plugins: {
     blog: true,
-
+    
     // all features are enabled for demo, only preserve features you need here
     mdEnhance: {
       align: true,

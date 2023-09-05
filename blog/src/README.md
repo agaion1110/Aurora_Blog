@@ -35,7 +35,7 @@ projects:
     link: https://blog.csdn.net/weixin_63050915?spm=1011.2415.3001.5343
 
   - icon: friend
-    name: 伙伴名称
+    name: Cai
     desc: 伙伴详细介绍
     link: https://你的伙伴链接
 
