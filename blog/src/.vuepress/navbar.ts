@@ -21,4 +21,9 @@ export default navbar([
     icon: 'time',
     link: '/timeline/'
   },
+  {
+    text: "友链",
+    icon: "link",
+    link: "/friend",
+  },
 ]);

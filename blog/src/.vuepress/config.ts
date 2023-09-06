@@ -5,7 +5,10 @@ import { hitokotoPlugin } from "./plugins/vuepress-plugin-hitokoto";
 import { PopperShape } from "@moefy-canvas/theme-popper";
 import theme from "./theme.js";
 import { path } from "@vuepress/utils";
-
+import {
+  canvasPlugin,
+  CanvasPluginType,
+} from "./plugins/vuepress-plugin-canvas";
 export default defineUserConfig({
   base: "/",
 
@@ -15,8 +18,6 @@ export default defineUserConfig({
   alias: {
     "@MyLink": path.resolve(__dirname, "./components/Mylink.vue"),
     "@MyCoverLink": path.resolve(__dirname, "./components/MyCoverLink.vue"),
-    "@Design": path.resolve(__dirname, "./data/design.ts"),
-    "@Api": path.resolve(__dirname, "./data/api.ts"),
   },
   theme,
   plugins: [
@@ -37,6 +38,15 @@ export default defineUserConfig({
     }),
     // 一言插件
     hitokotoPlugin({}),
+    // 背景插件
+    canvasPlugin({
+      type: CanvasPluginType.Ribbon,
+      ribbonOption: {
+        zIndex: 1,
+        alpha: 0.8,
+        size: 90,
+      },
+    }),
   ],
 });
 

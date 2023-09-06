@@ -1,8 +1,7 @@
-// import { hopeTheme } from "vuepress-theme-hope";
-import {MyTheme} from "./theme/index";
+import { hopeTheme } from "vuepress-theme-hope";
 import navbar from "./navbar.js";
 
-export default MyTheme({
+export default hopeTheme({
   hostname: "https://wei-z.top",
   author: {
     name: "Aurora",
