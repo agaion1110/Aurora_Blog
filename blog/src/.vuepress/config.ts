@@ -40,9 +40,9 @@ export default defineUserConfig({
     hitokotoPlugin({}),
     // 背景插件
     canvasPlugin({
-      type: CanvasPluginType.Ribbon,
+      type: CanvasPluginType.Figure,
       ribbonOption: {
-        zIndex: 1,
+        zIndex: 5,
         alpha: 0.8,
         size: 90,
       },
