@@ -42,7 +42,7 @@ projects:
     link: https://blog.csdn.net/weixin_63050915?spm=1011.2415.3001.5343
 
   - icon: friend
-    name: 友联🐛
+    name: 友链🐛
     desc: 伙伴详细介绍
     link: http://wei-z.top/friend.html
 
