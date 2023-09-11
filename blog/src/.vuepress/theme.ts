@@ -12,7 +12,7 @@ export default hopeTheme({
   logo: "/logo1.png",
   // 是否显示全屏按钮
   fullscreen: true,
-  repo: "https://github.com/agaion1110",
+  repo: "https://github.com/agaion1110/Aurora_Blog",
   // 滑动滚轮是否隐藏顶部导航栏
   navbarAutoHide: "always",
 
