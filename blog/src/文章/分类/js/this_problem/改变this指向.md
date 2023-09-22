@@ -4,19 +4,19 @@ date: 2023-07-01
 category:
   - js
 tag:
-  - this指向问题
   - 面试题
-star: true
-sticky: true
+star: false
+sticky: false
 copy.disableCopy: true
 ---
 
-#  改变this指向
+#  指定this指向
+
 与其他语言相比，**函数的 `this` 关键字**在 JavaScript 中的表现略有不同，此外，在[严格模式](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)和非严格模式之间也会有一些差别。
 
 在绝大多数情况下，函数的调用方式决定了 `this` 的值（运行时绑定）。`this` 不能在执行期间被赋值，并且在每次函数被调用时 `this` 的值也可能会不同。ES5 引入了 [bind](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/bind) 方法来设置函数的 `this` 值，而不用考虑函数如何被调用的。ES2015 引入了[箭头函数](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions)，箭头函数不提供自身的 this 绑定（`this` 的值将保持为闭合词法上下文的值）。<!-- more -->
 
-## 改变this指向的方法
+## 指定this指向的方法
 
 1.  call()方法
    语法: 函数.call(参数1,其他参数....可以是多个或者没有 )
@@ -44,14 +44,14 @@ copy.disableCopy: true
 
    ​			参数1,定义的要改变的的this指向
    ​			其他参数,一般不定义,是使用函数原有的形参
-
-​		总结:
-​    		call apply 都是立即执行函数
-​        		参数1,都是改变的this指向
-​       		 其他参数,是原始函数的形参(可以有,也可以没有)
-​    		bind 不是立即执行函数,是生成一个新的函数
-​        		参数1,是改变的this指向
-​        		就使用原始函数的形参
+   
+   总结:
+   ​    	call apply 都是立即执行函数
+   ​        		参数1,都是改变的this指向
+   ​       		 其他参数,是原始函数的形参(可以有,也可以没有)
+   ​    	bind 不是立即执行函数,是生成一个新的函数
+   ​        		参数1,是改变的this指向
+   ​        		就使用原始函数的形参
 
 ```javascript
 const obj1 = {

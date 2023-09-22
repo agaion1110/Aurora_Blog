@@ -97,19 +97,19 @@ JS是一门单线程的脚本语言，在JS渲染引擎中用栈来一步步解�
 我们来看下面这段代码执行的结构输出是多少：
 
 ```js
- 1: function Counter() {
- 2:   let count = 0
- 3:   const fn = function() {
- 4:     count = count + 1
- 5:     return count
- 6:   }
- 7:   return fn
- 8: }
- 9: const increment = Counter()
-10: const c1 = increment()
-11: const c2 = increment()
-12: const c3 = increment()
-13: console.log(c1, c2, c3)
+function Counter() {
+    let count = 0
+  	const fn = function() {
+        count = count + 1
+      	return count
+  	}
+  	return fn
+}
+const increment = Counter()
+const c1 = increment()
+const c2 = increment()
+const c3 = increment()
+console.log(c1, c2, c3)
 ```
 
 答案是：1，2，3
