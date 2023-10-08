@@ -3,11 +3,9 @@ icon: edit
 date: 2023-08-12
 category:
   - vue
-  - vite
   - 前端工程化
 tag:
   - 笔记
-  - 前端工程化构建工具
 star: 3812
 sticky: true
 copy.disableCopy: true
