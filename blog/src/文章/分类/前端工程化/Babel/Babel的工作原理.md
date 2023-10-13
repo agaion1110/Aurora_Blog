@@ -1,6 +1,6 @@
 ---
 icon: edit
-date: 2023-08-12
+date: 2023-10-12
 category:
   - vue
   - 前端工程化
@@ -22,7 +22,7 @@ Babel 是一个工具链，主要用于将采用 ECMAScript 2015+ 语法编写�
 - 语法转换
 - 通过 Polyfill 方式在目标环境中添加缺失的功能（通过引入第三方 polyfill 模块，例如 [core-js](https://github.com/zloirock/core-js)）
 - 源码转换（codemods）
-
+<!-- more -->
 ```js
 // Babel 接收到的输入是： ES2015 箭头函数
 [1, 2, 3].map(n => n + 1);

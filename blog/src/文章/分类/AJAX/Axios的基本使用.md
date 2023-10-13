@@ -7,7 +7,7 @@ category:
 tag:
   - 笔记
   - AJAX请求
-star: true
+star: 30731
 sticky: false
 copy.disableCopy: true
 ---

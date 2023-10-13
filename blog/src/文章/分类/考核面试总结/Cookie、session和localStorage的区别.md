@@ -6,7 +6,7 @@ category:
 tag:
   - 浏览器机制
   - 面试题
-star: true
+star: false
 sticky: true
 copy.disableCopy: true
 ---

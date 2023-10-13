@@ -6,8 +6,8 @@ category:
 tag:
   - leetcode
 star: false
-sticky: true
-pageview: true
+sticky: false
+pageview: false
 copy.disableCopy: true
 ---
 

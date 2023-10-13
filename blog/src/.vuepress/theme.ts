@@ -20,19 +20,16 @@ export default hopeTheme({
   navbar,
 
   footer: "大家一起进步哈(●'◡'●)",
-
+  
   displayFooter: false,
 
   blog: {
+    articlePerPage: 5,
     description: "一个前端萌新🐸",
     intro: "/文章/intro.html",
     medias: {
-      Dingding: "https://example.com",
-      BiliBili: "https://example.com",
       Gitee: "https://gitee.com/agaion1110",
       GitHub: "https://example.com",
-      QQ: "https://example.com",
-      Wechat: "https://wx.qq.com/"
     },
     roundAvatar: true,
     sidebarDisplay: "always",

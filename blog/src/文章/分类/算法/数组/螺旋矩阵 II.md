@@ -5,7 +5,7 @@ category:
   - 算法
 tag:
   - leetcode
-star: 3724
+star: 30724
 sticky: true
 pageview: true
 copy.disableCopy: true

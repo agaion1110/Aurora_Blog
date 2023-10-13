@@ -1,13 +1,13 @@
 ---
 icon: edit
-date: 2022-06-23
+date: 2023-06-23
 category:
   - js
   - 学习笔记
 tag:
   - 笔记
   - AJAX请求
-star: true
+star: 30623
 sticky: false
 copy.disableCopy: true
 ---

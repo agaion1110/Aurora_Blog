@@ -6,7 +6,7 @@ category:
 tag:
   - Promise
   - 面试题
-star: 3725
+star: 30725
 sticky: true
 copy.disableCopy: true
 ---

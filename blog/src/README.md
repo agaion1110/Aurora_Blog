@@ -12,14 +12,7 @@ bgImageStyle:
   - background-attachment: fixed
 heroText: Aurora's Blog
 heroFullScreen: true
-tagline: <div class="vp-blog-hero-description" id="hitokoto">
-            <div class="word">
-              <div class="left">『</div>
-              <span id="hitokoto_text"></span>
-              <div class="right">』</div>
-            </div>
-            <div class="author" id="hitokoto_author" style="opcatity:0"></div>
-         </div>
+tagline: <p id="tagline"><div class="vp-blog-hero-description" id="hitokoto"><div class="word"><div class="left">『</div><span id="hitokoto_text"></span><div class="right">』</div></div><span class="author" id="hitokoto_author" style="opcatity:0"></span></div></p>
 projects:
   - icon: project
     name: 项目名称🤖

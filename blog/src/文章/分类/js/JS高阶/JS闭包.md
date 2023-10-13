@@ -6,7 +6,7 @@ category:
 tag:
   - js基础
   - 面试题
-star: 3912
+star: 30912
 sticky: true
 copy.disableCopy: true
 ---
