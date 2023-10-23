@@ -2,7 +2,6 @@
 icon: edit
 date: 2023-09-30
 category:
-  - 学习笔记
   - 计算机网络
 tag:
   - 笔记

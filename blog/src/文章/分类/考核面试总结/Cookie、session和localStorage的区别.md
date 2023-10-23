@@ -2,7 +2,7 @@
 icon: edit
 date: 2023-09-22
 category:
-  - 学习笔记
+  - 面试考核总结
 tag:
   - 浏览器机制
   - 面试题
